@@ -10,16 +10,401 @@
     <!-- tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <title>Portfolio Website</title>
   </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer>
-      <p>Created By Mi. Bhq</p>
+  <body class="bg-gray-100 max-h-screen">
+    <!-- header Navbar -->
+    <header
+      class="bg-sky-300 px-5 py-3 fixed top-0 left-0 right-0 z-[9999] shadow-md"
+    >
+      <nav class="flex justify-between items-center w-full">
+        <div class="flex-shrink-0">
+          <img
+            src="asset/ReDesign MIB - Logo Smartphone - copy.png"
+            alt=""
+            class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg"
+          />
+        </div>
+        <!-- Desktop Navbar Menu -->
+        <ul class="hidden md:flex gap-2 text-sm sm:text-base">
+          <li
+            class="bg-white rounded-full font-semibold px-3 py-2 hover:bg-sky-500 hover:shadow-lg hover:text-white transition-colors"
+          >
+            <a href="#home">Home</a>
+          </li>
+          <li
+            class="bg-white rounded-full font-semibold px-3 py-2 hover:bg-sky-500 hover:shadow-lg hover:text-white"
+          >
+            <a href="#profile">Our Profile</a>
+          </li>
+          <li
+            class="bg-white rounded-full font-semibold px-3 py-2 hover:bg-sky-500 hover:shadow-lg hover:text-white"
+          >
+            <a href="#our-events">Our Events</a>
+          </li>
+          <li
+            class="bg-white rounded-full font-semibold px-3 py-2 hover:bg-sky-500 hover:shadow-lg hover:text-white"
+          >
+            <a href="#message-us">Message Us</a>
+          </li>
+        </ul>
+        <!-- End Desktop Navbar Menu -->
+
+        <!-- Hamburger Button dengan Icon -->
+        <button
+          id="hamburger-btn"
+          class="md:hidden w-10 h-10 flex items-center justify-center text-white text-xl hover:bg-sky-400 rounded-lg transition-colors"
+        >
+          <i id="hamburger-icon" class="fas fa-bars"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden mt-4 transition-all duration-300"
+      >
+        <ul class="flex flex-col gap-2 text-sm">
+          <li class="bg-white rounded-full font-semibold px-3 py-2">
+            <a
+              href="#home"
+              class="block hover:text-sky-600 transition-colors"
+              onclick="closeMobileMenu()"
+              >Home</a
+            >
+          </li>
+          <li class="bg-white rounded-full font-semibold px-3 py-2">
+            <a
+              href="#profile"
+              class="block hover:text-sky-600 transition-colors"
+              onclick="closeMobileMenu()"
+              >Our Profile</a
+            >
+          </li>
+          <li class="bg-white rounded-full font-semibold px-3 py-2">
+            <a
+              href="#our-events"
+              class="block hover:text-sky-600 transition-colors"
+              onclick="closeMobileMenu()"
+              >Our Events</a
+            >
+          </li>
+          <li class="bg-white rounded-full font-semibold px-3 py-2">
+            <a
+              href="#message-us"
+              class="block hover:text-sky-600 transition-colors"
+              onclick="closeMobileMenu()"
+              >Message Us</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- End Mobile Menu -->
+    </header>
+    <main>
+      <!-- content Welcome -->
+      <section id="home" class="relative w-full h-[400px] lg:h-[578px]">
+        <img
+          src="asset/campaign-creators-gMsnXqILjp4-unsplash.jpg"
+          alt="gambar-perusahaan"
+          class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="relative z-10 flex items-center justify-center h-full">
+          <div class="container mx-auto text-center text-xl lg:ps-5 lg:pt-5">
+            <h1
+              class="text-white md:text-xl lg:text-4xl font-[Poppins] font-semibold"
+            >
+              Hi <span id="user-name">Guest</span>, Welcome To Website Kreasi
+              Acara Indonesia
+            </h1>
+            <p class="text-gray-200 text-base lg:text-xl">
+              Creative Agency & Event Organizer
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- End content Welcome -->
+
+      <!-- Our Profile -->
+      <section id="profile" class="bg-white sm:min-h-[500px] py-20">
+        <div class="py-8 px-4 lg:p-10">
+          <div class="container mx-auto max-w-4xl">
+            <h1
+              class="text-lg sm:text-xl font-semibold font-[Poppins] text-center mb-6"
+            >
+              Profile Kami
+            </h1>
+            <div class="space-y-6">
+              <article
+                class="text-justify font-serif text-sm sm:text-base leading-relaxed indent-8"
+              >
+                Kami mempunya visi untuk meberikan setiap moment acara menjadi
+                pengalaman yang tak terlupakan. Dengan semangat kreativitas dan
+                komitmen terhadap keunggulan, kami terus berinovasi dalam
+                mengatur dan melaksanakan acara yang meninggalkan kesan
+                mendalam. Dengan dukungan tim yang profesional, kami berdedikasi
+                dan berupaya mengubah ide menjadi kenyataan, dan selalu
+                memastikan setiap detail direncanakan dengan cermat dan
+                dilaksanakan dengan sempurna.
+              </article>
+            </div>
+          </div>
+          <br />
+          <hr />
+          <br />
+          <div class="container mx-auto max-w-4xl">
+            <h1
+              class="text-lg sm:text-xl font-semibold font-[Poppins] text-center mb-6"
+            >
+              Mengapa Kami
+            </h1>
+            <div class="space-y-6">
+              <article class="text-justify sm:text-center">
+                Kami memberikan jawaban terbaik dari pencarian ide terbaik Anda.
+                Perusahaan yang berorientasi pada kualitas dan mengutamakan
+                kenyamanan serta orisinalitas suatu ide dan konsep. Biarkan kami
+                berkreasi untuk mewujudkan konsep terbaik untuk acara Anda
+              </article>
+              <div
+                class="container sm:flex sm:justify-between sm:gap-10 space-y-4 max-w-4xl"
+              >
+                <div
+                  class="bg-white shadow-lg rounded-lg p-4 sm:px-5 sm:py-10 sm:h-100"
+                >
+                  <img
+                    src="asset/creativity.png"
+                    alt="creativity"
+                    class="w-24 h-24 mx-auto mb-2"
+                  />
+                  <p class="text-lg sm:text-xl text-center font-semibold mb-2">
+                    Kreatif
+                  </p>
+                  <article class="text-justify">
+                    Kreasi memberikan ide-ide segar dan kreatif untuk membuat
+                    acara lebih berkesan. Kami memberikan pandangan baru dan
+                    solusi kreatif untuk membuat acara lebih menarik.
+                  </article>
+                </div>
+                <div
+                  class="bg-white shadow-lg rounded-lg p-4 sm:px-5 sm:py-10 sm:h-100"
+                >
+                  <img
+                    src="asset/deal.png"
+                    alt="deal"
+                    class="w-24 h-24 mx-auto mb-2"
+                  />
+                  <p class="text-lg sm:text-xl text-center font-semibold mb-2">
+                    Profesional
+                  </p>
+                  <article class="text-justify">
+                    Kreasi memiliki pengalaman dalam mengelola berbagai macam
+                    acara dan memiliki pengetahuan yang luas tentang industri
+                    acara, termasuk tren terbaru, teknologi, dan praktik
+                    terbaik.
+                  </article>
+                </div>
+                <div
+                  class="bg-white shadow-lg rounded-lg p-4 sm:px-5 sm:py-10 sm:h-100"
+                >
+                  <img
+                    src="asset/like.png"
+                    alt="like"
+                    class="w-24 h-24 mx-auto mb-2"
+                  />
+                  <p class="text-lg sm:text-xl text-center font-semibold mb-2">
+                    Terpercaya
+                  </p>
+                  <article class="text-justify">
+                    Kreasi mampu merencanakan dan mengelola setiap acara, mulai
+                    dari penjadwalan hingga koordinasi, memastikan semuanya
+                    berjalan sesuai rencana. Sehingga kami di percaya oleh
+                    banyak perusahaan.
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Our Profile -->
+
+      <!-- content Our Events -->
+      <section id="our-events" class="py-20 lg:px-10">
+        <div class="container mx-auto">
+          <h1 class="text-2xl font-semibold font-[Poppins] mb-6 text-center">
+            Our Events
+          </h1>
+          <div
+            class="flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10"
+          >
+            <div class="flex flex-col items-center">
+              <img
+                src="asset/investor-gathering-2017.png"
+                alt=""
+                class="rounded-full w-20 h-20 sm:w-24 sm:h-24 object-cover"
+              />
+              <p class="mt-2 text-sm sm:text-base">Investor Gathering</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="asset/kick-off-meeting-corporate-bank.png"
+                alt=""
+                class="rounded-full w-20 h-20 sm:w-24 sm:h-24 object-cover"
+              />
+              <p class="mt-2 text-sm sm:text-base">
+                Kick Off Meeting Corporate Bank
+              </p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="asset/night-run-BI.png"
+                alt=""
+                class="rounded-full w-20 h-20 sm:w-24 sm:h-24 object-cover"
+              />
+              <p class="mt-2 text-sm sm:text-base">Night Run BI Kalteng</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Our Events -->
+
+      <!-- content Message us -->
+      <section id="message-us" class="bg-white px-4 py-20 lg:px-10">
+        <div class="container mx-auto">
+          <h1 class="text-lg sm:text-2xl font-semibold mb-6 text-center">
+            Message Us
+          </h1>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- form -->
+            <div class="order-1">
+              <form action="" class="space-y-4">
+                <!-- Input Nama -->
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-[150px_10px_1fr] items-center gap-2"
+                >
+                  <label for="">Name</label>
+                  <span class="hidden sm:block">:</span>
+                  <input
+                    type="text"
+                    id="input-nama"
+                    class="bg-white border rounded w-full p-2"
+                    required
+                  />
+                </div>
+                <!-- End Input Nama -->
+
+                <!-- Input Tanggal Lahir -->
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-[150px_10px_1fr] items-center gap-2"
+                >
+                  <label for="">Tanggal Lahir</label>
+                  <span class="hidden sm:block">:</span>
+                  <input
+                    type="date"
+                    id="input-date"
+                    class="bg-white border rounded w-full p-2"
+                    required
+                  />
+                </div>
+                <!-- End Input Tanggal Lahir -->
+
+                <!-- Input Jenis Kelamin -->
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-[150px_10px_1fr] items-center gap-2"
+                >
+                  <label for="">Jenis Kelamin</label>
+                  <span class="hidden sm:block">:</span>
+                  <div class="flex flex-col sm:flex-row gap-4">
+                    <label class="flex items-center">
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="Laki-laki"
+                        class="mr-2"
+                        required
+                      />
+                      Laki-laki
+                    </label>
+                    <label class="flex items-center">
+                      <input
+                        type="radio"
+                        name="gender"
+                        value="Perempuan"
+                        class="mr-2"
+                        required
+                      />
+                      Perempuan
+                    </label>
+                  </div>
+                </div>
+                <!-- End Jenis Kelamin -->
+
+                <!-- Input Pesan -->
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-[150px_10px_1fr] items-center gap-2"
+                >
+                  <label for="">Pesan</label>
+                  <span class="hidden sm:block">:</span>
+                  <textarea
+                    name=""
+                    id="pesan"
+                    rows="5"
+                    class="bg-white border rounded w-full p-2"
+                    required
+                  ></textarea>
+                </div>
+                <!-- End Input Pesan -->
+
+                <!-- Button -->
+                <button
+                  type="button"
+                  class="bg-sky-300 px-4 py-2 rounded-lg w-full"
+                  onclick="addData()"
+                >
+                  Kirim
+                </button>
+                <!-- End Button -->
+              </form>
+              <!-- End form -->
+            </div>
+            <div class="order-2">
+              <!-- Message TextArea -->
+              <div class="h-full">
+                <!-- <textarea
+                  name=""
+                  id="show-message"
+                  rows="12"
+                  class="bg-white border rounded w-full p-3 h-full min-h-[300px]"
+                  readonly
+                ></textarea> -->
+                <div
+                  id="show-message"
+                  class="bg-white border rounded w-full h-full p-3 min-h-[300px]"
+                ></div>
+              </div>
+              <!-- End Message TextArea -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Message us -->
+    </main>
+    <footer class="bg-sky-300 p-4">
+      <div class="container mx-auto">
+        <p class="text-center lg:text-end text-gray-100 font-semibold">
+          Created By Mi. Bhq
+        </p>
+      </div>
     </footer>
 
     <!-- js -->
-    <script src="js/index.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
