@@ -88,10 +88,10 @@ function displayData(data) {
 
   showMessage.innerHTML = `
     <b>Current Time :</b> ${new Date().toUTCString()} <br><br>
-    Nama          : ${data.nama} <br>
-    Tanggal       : ${data.date} <br>
-    Jenis Kelamin : ${data.gender} <br>
-    Pesan         : ${data.pesan} <br>
+    <b>Nama          :</b> ${data.nama} <br>
+    <b>Tanggal       :</b> ${data.date} <br>
+    <b>Jenis Kelamin :</b> ${data.gender} <br>
+    <b>Pesan         :</b> ${data.pesan} <br>
   `;
 
   // showMessage.innerHTML = hasilForm;
